@@ -91,7 +91,7 @@
 }
 
 /* Base
-============================= */
+    ============================= */
 
 *, *:before, *:after {
 box-sizing: border-box;
@@ -150,7 +150,7 @@ transition-property: color, background-color;
 }
 
 /* Helpers
-============================= */
+    ============================= */
 
 .visually-hidden:not(:focus):not(:active) {
 position: absolute !important;
@@ -160,20 +160,9 @@ overflow: hidden;
 clip: rect(1px, 1px, 1px, 1px);
 white-space: nowrap;
 }
-
-/*** 2. LAYOUT ***/
-
-/* Layout
-============================= */
-
-.container {
-width: 960px;
-margin-left: auto;
-margin-right: auto;
-}
-
 /* Grid
-============================= */
+    ============================= */
+
 .row {
 display: flex;
 }
@@ -197,7 +186,11 @@ width: calc((100% / 2) - 2rem);
 }
 
 /* Navbar
-============================= */
+    ============================= */
+
+.navbar-menu {
+float: right;
+}
 
 .nav {
 margin: 0;
@@ -246,7 +239,7 @@ margin: var(--nav-item-margin);
 }
 
 /* Header
-============================= */
+    ============================= */
 
 .header-container {
 display: flex;
@@ -258,11 +251,11 @@ align-items: center;
 padding: var(--header-padding);
 position: relative;
 z-index: 3;
-background: transparent;
+background: transparent !important;
 }
 
 /* Footer
-============================= */
+    ============================= */
 
 .footer {
 --nav-item-font-weight: normal;
@@ -295,7 +288,7 @@ fill: var(--text-color);
 /*** 3. SECTION ***/
 
 /* Section (all styles)
-============================= */
+    ============================= */
 
 .section {
 padding: var(--section-padding);
@@ -332,7 +325,7 @@ text-align: var(--section-footer-align);
 }
 
 /* Section theming
-============================= */
+    ============================= */
 
 [data-section-theme="dark"] {
 --button-color: var(--color-white);
@@ -342,7 +335,7 @@ background-color: #010101;
 }
 
 /* Section HERO
-============================= */
+    ============================= */
 
 .section-hero {
 position: relative;
@@ -377,12 +370,13 @@ justify-content: center;
 min-height: 50vh;
 }
 
-/* Section Latest news ============================= */
+/* Section Latest news =============================*/
 
-.section-latest-news .row {
+.section-blog .row {
 flex-direction: row-reverse;
-
 }
+
+/*** 4. CARD ***/
 
 /* Section SERVICES ============================= */
 
@@ -396,17 +390,15 @@ flex-wrap: wrap;
 align-self: center;
 }
 
-/*** 4. CARD ***/
-
 /* Card (all styles)
-============================= */
+    ============================= */
 
 .card-category {
 color: var(--color-primary);
 }
 
 /* Card WORK
-============================= */
+    ============================= */
 
 .card-work .card-outer {
 position: relative;
@@ -471,7 +463,7 @@ opacity: 1;
 }
 
 /* Card SERVICES
-============================= */
+    ============================= */
 
 .card-services .card-title {
 margin: 0;
@@ -492,7 +484,7 @@ transition-property: color, background-color;
 }
 
 /* Card TESTIMONIAL
-============================= */
+    ============================= */
 
 .card-testimonial {
 text-align: center;
@@ -534,7 +526,7 @@ background-position: 50% 0;
 }
 
 .hero-article::before {
-content:"";
+content: "";
 background: rgba(0, 0, 0, 0.8);
 position: absolute;
 top: 0;
@@ -580,43 +572,43 @@ min-width: 20%;
 ============================= */
 
 .post-meta-list {
-    flex-direction: column;
+flex-direction: column;
 }
 
 .post-meta-list strong {
-    color: var(--color-primary);
-    font-size: var(--font-size-small);
-    text-transform: uppercase;
-    display: block;
+color: var(--color-primary);
+font-size: var(--font-size-small);
+text-transform: uppercase;
+display: block;
 }
 
 .post-meta-list [class*='post-meta-'] {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 0.2rem solid var(--color-light-grey);
+margin-bottom: 1rem;
+padding-bottom: 1rem;
+border-bottom: 0.2rem solid var(--color-light-grey);
 }
 
 .post-meta-list [class*='post-meta-']:last-child {
-    border: none;
-    margin-bottom: 3rem;
+border: none;
+margin-bottom: 3rem;
 }
 
 /* Tag list
-    ============================= */
+============================= */
 
 .tag-list {
-    padding: 0;
-    list-style: none;
+padding: 0;
+list-style: none;
 }
 
 .tag-list li {
-    display: inline;
+display: inline;
 }
 
 .tag-list li::after {
-    content: ", ";
+content: ", ";
 }
 
 .tag-list li:last-child::after {
-    content: "";
+content: "";
 }
