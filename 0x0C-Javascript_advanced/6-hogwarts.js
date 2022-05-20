@@ -8,7 +8,7 @@ function studentHogwarts() {
         setName: function(newName) {name = newName},
         rewardStudent: function() {changeScoreBy(1)},
         penalizeStudent: function() {changeScoreBy(-1)},
-        getScore: function() {return `${name} + ":" + ${privateScore}`}
+        getScore: function() {return `${name}: ${privateScore}`}
     }
 }
 
