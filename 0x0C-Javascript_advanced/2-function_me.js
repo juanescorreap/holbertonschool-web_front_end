@@ -1,5 +1,5 @@
 function welcomeMessage(fullName) {
-    return function() {
+    return function () {
         alert("Welcome " + fullName)
     };
 }
