@@ -26,7 +26,10 @@
             const table_row_3 = $("<tr></tr>").append(firstname_2, lastname_2);
             const table_row_4 = $("<tr></tr>").append(firstname_3, lastname_3);
             $("body").append("<table></table>");
-            $("table").append(table_row_1, table_row_2, table_row_3, table_row_4);        }
+            $("table").append("<thead></thead>", "<tbody></tbody>");
+            $("thead").append(table_row_1);
+            $("tbody").append(table_row_2, table_row_3, table_row_4);
+        }
         createFamilyTree();
     </script>
 
