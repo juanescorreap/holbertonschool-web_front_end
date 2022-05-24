@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Task 0</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <script type="application/javascript">
+        function createFamilyTree() {
+            const header_firstname = $("<th></th>").text("Firstname");
+            const header_lastname = $("<th></th>").text("Lastname");
+            const firstname_1 = $("<td></td>").text("Guillaume");
+            const firstname_2 = $("<td></td>").text("Paulette");
+            const firstname_3 = $("<td></td>").text("Antoine");
+            const lastname_1 = $("<td></td>").text("Salva");
+            const lastname_2 = $("<td></td>").text("Salva");
+            const lastname_3 = $("<td></td>").text("Salva");
+            const table_row_1 = $("<tr></tr>").append(header_firstname, header_lastname);
+            const table_row_2 = $("<tr></tr>").append(firstname_1, lastname_1);
+            const table_row_3 = $("<tr></tr>").append(firstname_2, lastname_2);
+            const table_row_4 = $("<tr></tr>").append(firstname_3, lastname_3);
+            $("body").append("<table></table>");
+            $("table").append(table_row_1, table_row_2, table_row_3, table_row_4);        }
+        createFamilyTree();
+    </script>
+
+</body>
+
+</html>
