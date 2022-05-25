@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Task 0</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <script type="application/javascript">
+        function createFamilyTree() {
+            const header_firstname = $("<th></th>").text("Firstname");
+            const header_lastname = $("<th></th>").text("Lastname");
+            const table_row_1 = $("<tr></tr>").append(header_firstname, header_lastname);
+            $("body").append("<table></table>");
+            $("table").append("<thead></thead>", "<tbody></tbody>");
+            $("thead").append(table_row_1);
+        }
+        function addNewMember(firstName, lastName, position) {
+            let new_table_row = $("<tr></tr>");
+            let button = $("<td>(x)</td>");
+
+            button.css("background-color", "orange");
+            button.click(function () { $(new_table_row).remove() });
+
+            new_table_row.append(`<td>${firstName}</td>`);
+            new_table_row.append(`<td>${lastName}</td>`);
+            new_table_row.append(button);
+            if (position === "before") {
+                $("tbody").prepend(new_table_row);
+            } else {
+                $("tbody").append(new_table_row);
+            }
+        }
+        function createForm() {
+            let select_tag = $("<select></select>");
+            let submit_tag = $("<input type='submit'>");
+
+            select_tag.append("<option value='before'>Before</option>", "<option value='after'>After</option>");
+
+            submit_tag.click(function() {
+                let input_1 = $("input").first().val();
+                let input_2 = $("input:nth-of-type(2)").val();
+                let option_selected = select_tag.val();
+
+                addNewMember(input_1, input_2, option_selected);
+            });
+            $("table").before("<input type='text'>", "<input type='text'>", select_tag, submit_tag);
+        }
+        createFamilyTree();
+        createForm();
+    </script>
+
+</body>
+
+</html>
