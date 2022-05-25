@@ -25,7 +25,7 @@
             let button = $("<td>(x)</td>");
 
             button.css("background-color", "orange");
-            button.click(function () { $(new_table_row).remove });
+            button.click(function () { $(new_table_row).remove() });
 
             new_table_row.append(`<td>${firstName}</td>`);
             new_table_row.append(`<td>${lastName}</td>`);
