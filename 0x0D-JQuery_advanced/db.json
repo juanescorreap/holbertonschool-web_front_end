@@ -1,0 +1,64 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "title": "Don Quixote",
+        "author": "Miguel de Cervantes"
+      },
+      {
+        "title": "A Tale of Two Cities",
+        "author": "Charles Dickens",
+        "id": 2
+      },
+      {
+        "title": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "id": 3
+      },
+      {
+        "title": "The Little Prince",
+        "author": "Antoine de Saint-Exupéry",
+        "id": 4
+      },
+      {
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "id": 5
+      },
+      {
+        "title": "Harry Potter and the Philosopher's Stone",
+        "author": "J.K. Rowling",
+        "id": 6
+      },
+      {
+        "title": "The Lion, The Witch and the Wardrobe",
+        "author": "C.S. Lewis",
+        "id": 7
+      },
+      {
+        "title": "She: A History of Adventure",
+        "author": "H. Rider Haggard",
+        "id": 8
+      },
+      {
+        "title": "The Adventures of Pinocchio",
+        "author": "Carlo Collodi",
+        "id": 9
+      },
+      {
+        "title": "The Da Vinci Code",
+        "author": "Dan Brown",
+        "id": 10
+      }
+    ],
+    "comments": [
+      {
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+      }
+    ],
+    "profile": {
+      "name": "typicode"
+    }
+  }
