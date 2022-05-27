@@ -31,8 +31,10 @@
             document.cookie = "email=" + value_email + "; expires=" + string_date;
         }
         function showCookies() {
+            let split_cookies = document.cookie.split(";");
             let paragraph = document.createElement("p");
-            paragraph.innerHTML = document.cookie;
+            let content = document.createTextNode("Cookies: " + split_cookies[0].split("=")[1] + ", " + split_cookies[1].split("=")[1]);
+            paragraph.appendChild(content);
             document.body.appendChild(paragraph);
         }
 
