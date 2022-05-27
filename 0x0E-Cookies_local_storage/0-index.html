@@ -6,40 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <script type="application/javascript">
-        let firstname_input = $("<input type='text' placeholder='Firstname'>");
-        let email_input = $("<input type='text' placeholder='Email'>")
-        let header_1 = $("<h1></h1>").text("Login to the website");
-        let header_2 = $("<h1></h1>").text("Cookies");
-        let button_1 = $("<button type='button'></button>").text("Log me in");
-        let button_2 = $("<button type='button'></button>").text("Show the cookies");
+    <h1>Login to the website</h1>
+    <input type="text" placeholder="FirstName" id="firstname">
+    <input type="text" placeholder="Email" id="email">
+    <button type="button" onclick="setCookies()" id="button_set">Log me in</button>
+    <h1>Cookies</h1>
+    <button type="button" onclick="showCookies()" id="button_show">Log me in</button>
 
-        let row_1 = $("<tr></tr>").append(header_1);
-        let row_2 = $("<tr></tr>").append(firstname_input, email_input, button_1);
-        let row_3 = $("<tr></tr>").append(header_2);
-        let row_4 = $("<tr></tr>").append(button_2);
-        $("body").append("<table></table>");
-        $("table").append(row_1, row_2, row_3, row_4);
 
-        $("button_1").click(function () { setCookies(); });
-        $("button_2").click(function () { showCookies(); });
-
+    <script>
         function setCookies() {
-            let value_firstname = $("input").first().val();
-            let value_email = $("input:nth-of-type(2)").val();
+            let value_firstname = document.getElementById("firstname").value;
+            let value_email = document.getElementById("email").value;
             document.cookie = "firstname=" + value_firstname;
             document.cookie = "email=" + value_email;
         }
         function showCookies() {
-            let all_cookies = document.cookie.split(";");
-            let content = document.createTextNode("Cookies: " + all_cookies[0].split("=")[1] + ", " + all_cookies[1].split("="[1]));
-            $("body").append("<p></p>");
-            $("p").append(content);
+            let paragraph = document.createElement("p");
+            paragraph.innerHTML = document.cookie;
+            document.body.appendChild(paragraph);
         }
 
     </script>
